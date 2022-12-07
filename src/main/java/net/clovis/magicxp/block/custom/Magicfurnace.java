@@ -24,8 +24,8 @@ public class Magicfurnace extends Block {
 
 
     @Override
-    public void stepOn(Level level, BlockPos blockPos, BlockState blockState, Entity entity, MovementInputUpdateEvent event) {
-        if (entity instanceof LivingEntity LivingEntity && event.getInput().shiftKeyDown) {
+    public void stepOn(Level level, BlockPos blockPos, BlockState blockState, Entity entity) {
+        if (entity instanceof LivingEntity LivingEntity) {
                 LivingEntity.addEffect(new MobEffectInstance(MobEffects.JUMP, 200));
 
         }
