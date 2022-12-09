@@ -1,6 +1,7 @@
 package net.clovis.magicxp.item;
 
 import net.clovis.magicxp.Magicxp;
+import net.clovis.magicxp.item.custom.Magicwand;
 import net.clovis.magicxp.item.custom.XptabletItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -22,7 +23,7 @@ public class Moditems {
                     .rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand",
-            () -> new Item(new Item.Properties().tab(CreativeTab.MAGIC_XP_TAB).stacksTo(1)));
+            () -> new Magicwand(new Item.Properties().tab(CreativeTab.MAGIC_XP_TAB).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus) {
